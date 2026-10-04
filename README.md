@@ -125,16 +125,12 @@ For orientation only. The test molecules, model size and training data differ, a
 
 ## Next
 
-- Seeds two and three for every arm.
 - Learning curve at 1,000, 3,000 and 10,000 training molecules (subsets already built).
 - Noise robustness using SpectraLLM's noise settings.
 - A windowed variant (400–1800 cm⁻¹) to measure what a SERS-compatible window costs.
 - SpectraLLM's released 32B adapter on these test molecules, as a reference for scale.
 
 ## Repository layout
-
-> **TODO (Mo):** replace with the real tree (`tree -L 2 -I 'outputs|data|wandb'`).
-
 ```
 configs/      one YAML per arm
 data/         split files and peak lists (QM9S itself is not redistributed)
@@ -146,15 +142,12 @@ results/      per-arm metric tables and figures
 
 ## Reproduce
 
-> **TODO (Mo):** fill in the real commands.
-
 ```bash
 conda env create -f environment.yml && conda activate spectral-strings
 python data/build_splits.py       # needs QM9S downloaded separately
 python train/train.py --config configs/B_modes_on.yaml
 python eval/predict.py --arm B_modes_on && python eval/score.py
 ```
-
 Four training runs take about a day on one L40S (48 GB).
 
 ## References
