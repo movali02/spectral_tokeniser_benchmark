@@ -28,11 +28,34 @@
 /experiment_1_phase3/B_modes_off__train_10000/epoch_2/adapter_model.safetensors
 /experiment_1_phase3/B_modes_off__train_10000/last/adapter_model.safetensors
 /experiment_1_phase3/B_modes_off__train_10000/last/state.pt
-checkpoints/
-activations/
+# data, weights, activations
 data/raw/
+data/qm9s/
 *.pt
+*.pth
 *.safetensors
+*.npy
+*.npz
+*.h5
+*.parquet
+checkpoints/
+adapters/
+activations/
+
+# run outputs
+outputs/
+runs/
+wandb/
+logs/
+*.log
+
+# python and editors
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.vscode/
+.idea/
 
 /experiment_1_phase2/modes.parquet
 /experiment_1_phase2/prompts/A_native/train_10000.jsonl
