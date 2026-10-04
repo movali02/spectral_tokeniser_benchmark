@@ -1,4 +1,4 @@
-# spectral-strings
+# spectral tokenisers
 
 **Does a richer text format help a language model read a spectrum?**
 A controlled comparison of two ways of writing IR and Raman spectra as text, for predicting molecular structure with a fine-tuned LLM, on the QM9S benchmark used by [SpectraLLM](https://arxiv.org/abs/2508.08441).
