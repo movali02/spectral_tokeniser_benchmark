@@ -7,7 +7,7 @@ A controlled comparison of two ways of writing IR and Raman spectra as text, for
 
 Four models were trained that differ only in how the spectrum is written as text. Scores are mean ECFP4 Tanimoto similarity between the predicted and the true molecule on 1,000 held-out molecules (0.081 for a random training molecule, 1.0 for a perfect prediction).
 
-![Mean ECFP4 Tanimoto for four arms across IR, Raman and IR+Raman](assets/tanimoto_by_arm.png)
+![Mean ECFP4 Tanimoto for four arms across IR, Raman and IR+Raman](assets/full_string_vs_spectrallm.png)
 
 1. **The format alone slightly helps.** Our structured format without mode labels beats SpectraLLM's layout by +0.012 on IR+Raman (95% interval +0.0004 to +0.023). Exact match is unchanged at 1.8%.
 2. **Vibrational mode labels help a lot.** Adding a mode label to each peak gives +0.102 (nearly 50% increase) and raises exact match from 1.8% to 8.1% (nearly 7x). About 90% of the total gain comes from the labels.
