@@ -1,0 +1,62 @@
+# Contact: romi@lens.unifi.it
+# Manual: https://github.com/SebRoLENS/orca-ped-analyzer/blob/main/docs/ORCA_PED_Analyzer_Manual.md
+# Check GitHub for updates and new releases: https://github.com/SebRoLENS/orca-ped-analyzer
+#
+# Molecule: 8 atoms | non-linear
+# Bonds inferred: 7 | candidate ICs: 37 | selected ICs: 18
+# Cartesian-Hessian reconstruction relative error: 2.464e-05
+# Energy distribution: PED (PED is the backward-compatible default; TED includes kinetic-energy terms)
+# Ring/cycle bonds detected: 0 | ring atoms: 0 | ring systems: 0
+# VPT2: no matching .out file supplied/found -> harmonic/PED analysis only
+#
+ Mode   Harm/cm-1   VPT2/cm-1  Harm.Int/km mol-1  Assignment                                                     Grouped PED
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    6       50.07          --                 --  mixed C-O torsion / C-H bending                                C-O torsion 75.47%; C-H bending 22.48%
+    7      191.49          --                 --  C-O torsion                                                    C-O torsion 94.82%; C-H bending 5.07%
+    8      373.28          --                 --  C-O-C bending                                                  C-O-C bending 72.06%; O-C-O bending 19.59%; C-H bending 6.19%; C-O stretching 2.11%
+    9      638.48          --                 --  mixed O-C-O bending / C-O stretching                           O-C-O bending 53.08%; C-O stretching 30.74%; C-H bending 9.85%; C-O-C bending 6.32%
+   10     1020.11          --                 --  mixed C-O stretching / O-C-O bending                           C-O stretching 53.22%; O-C-O bending 29.12%; C-H bending 11.36%; C-O-C bending 6.24%
+   11     1035.10          --                 --  C-O out-of-plane bending                                       C-O out-of-plane bending 98.80%
+   12     1110.78          --                 --  mixed opposite-phase C-O stretching / C-H bending              opposite-phase C-O stretching 52.52%; C-H bending 46.38%
+   13     1176.95          --                 --  C-H bending                                                    C-H bending 99.58%
+   14     1258.24          --                 --  mixed C-H bending / mixed-phase C-O stretching                 C-H bending 67.05%; mixed-phase C-O stretching 26.86%; C-O-C bending 3.14%; O-C-O bending 2.81%
+   15     1416.60          --                 --  C-H bending                                                    C-H bending 97.78%
+   16     1484.17          --                 --  C-H bending                                                    C-H bending 99.80%
+   17     1490.27          --                 --  C-H bending                                                    C-H bending 97.51%; C-O stretching 2.16%
+   18     1512.55          --                 --  C-H bending                                                    C-H bending 99.55%
+   19     1838.93          --                 --  C-O stretching                                                 C-O stretching 92.35%; C-H bending 4.47%
+   20     2944.00          --                 --  C-H stretching                                                 C-H stretching 98.53%
+   21     3033.67          --                 --  C-H stretching                                                 C-H stretching 99.72%
+   22     3111.95          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 99.33%
+   23     3132.15          --                 --  opposite-phase C-H stretching                                  opposite-phase C-H stretching 99.53%
+
+# Selected internal-coordinate set:
+#   1  nu(C1-H5)
+#   2  nu(O2-C3)
+#   3  nu(C1-H6)
+#   4  nu(C3-H8)
+#   5  nu(C1-H7)
+#   6  gamma(O4;C3,O2,H8)
+#   7  nu(C1-O2)
+#   8  nu(C3-O4)
+#   9  delta(H5-C1-H7)
+#  10  delta(H6-C1-H7)
+#  11  delta(O4-C3-H8)
+#  12  delta(H5-C1-H6)
+#  13  tau(C1-O2-C3-O4)
+#  14  delta(O2-C1-H6)
+#  15  delta(O2-C3-O4)
+#  16  delta(O2-C1-H5)
+#  17  tau(H7-C1-O2-C3)
+#  18  delta(C1-O2-C3)
+
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/35/35_summary.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/35/35_families.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/35/35_ped.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/35/35_ir_transitions.csv
+
+# All generated files are in: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/35
+# Manifest: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/35/35_manifest.txt
+
+--- stderr ---
+Normal modes/frequencies absent or incomplete: diagonalizing Hessian.

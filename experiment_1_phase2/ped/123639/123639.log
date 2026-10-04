@@ -1,0 +1,122 @@
+# Contact: romi@lens.unifi.it
+# Manual: https://github.com/SebRoLENS/orca-ped-analyzer/blob/main/docs/ORCA_PED_Analyzer_Manual.md
+# Check GitHub for updates and new releases: https://github.com/SebRoLENS/orca-ped-analyzer
+#
+# Molecule: 18 atoms | non-linear
+# Bonds inferred: 17 | candidate ICs: 134 | selected ICs: 48
+# Cartesian-Hessian reconstruction relative error: 1.833e-05
+# Energy distribution: PED (PED is the backward-compatible default; TED includes kinetic-energy terms)
+# Ring/cycle bonds detected: 0 | ring atoms: 0 | ring systems: 0
+# VPT2: no matching .out file supplied/found -> harmonic/PED analysis only
+#
+ Mode   Harm/cm-1   VPT2/cm-1  Harm.Int/km mol-1  Assignment                                                     Grouped PED
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    6       40.97          --                 --  C-C torsion                                                    C-C torsion 96.27%
+    7       62.05          --                 --  C-C torsion                                                    C-C torsion 91.97%; C-C-C bending 5.81%
+    8       82.47          --                 --  C-C torsion                                                    C-C torsion 94.87%; C-C-C bending 3.20%
+    9      151.65          --                 --  C-C torsion                                                    C-C torsion 98.45%
+   10      163.16          --                 --  mixed C-C-C bending / C-O out-of-plane bending                 C-C-C bending 54.36%; C-O out-of-plane bending 23.63%; C-C torsion 12.62%; C-H bending 6.39%
+   11      217.85          --                 --  mixed C-C torsion / C-C-C bending                              C-C torsion 43.42%; C-C-C bending 37.65%; C-H bending 10.69%; O-C-C bending 3.79%
+   12      235.27          --                 --  mixed C-C-C bending / C-C torsion                              C-C-C bending 52.27%; C-C torsion 25.43%; C-O out-of-plane bending 8.99%; C-H bending 4.81%
+   13      345.09          --                 --  mixed C-C-C bending / C-C torsion                              C-C-C bending 54.83%; C-C torsion 14.98%; C-C-O bending 12.51%; C-H bending 7.11%
+   14      411.70          --                 --  mixed C-C-C bending / C-C torsion                              C-C-C bending 58.02%; C-C torsion 19.60%; C-H bending 11.99%; O-C-C bending 3.65%
+   15      492.04          --                 --  mixed C-O out-of-plane bending / C-C torsion / O-C-C bending   C-O out-of-plane bending 36.71%; C-C torsion 24.07%; O-C-C bending 15.79%; C-H bending 12.92%
+   16      533.89          --                 --  mixed C-C-O bending / C-H bending                              C-C-O bending 57.47%; C-H bending 14.44%; C-C-C bending 8.19%; mixed-phase C-C stretching 8.13%
+   17      577.44          --                 --  mixed C-O out-of-plane bending / C-C torsion / C-H bending     C-O out-of-plane bending 36.24%; C-C torsion 24.88%; C-H bending 16.96%; O-C-C bending 9.70%
+   18      641.68          --                 --  mixed C-C stretching / C-O out-of-plane bending                C-C stretching 33.43%; C-O out-of-plane bending 20.56%; C-C torsion 13.56%; C-H bending 11.39%
+   19      786.47          --                 --  mixed C-C torsion / C-H bending / in-phase C-C stretching      C-C torsion 33.30%; C-H bending 30.37%; in-phase C-C stretching 19.10%; C-C-C bending 7.21%
+   20      790.62          --                 --  mixed mixed-phase C-C stretching / C-H bending                 mixed-phase C-C stretching 60.94%; C-H bending 19.22%; C-C torsion 6.90%; C-C-C bending 5.46%
+   21      831.83          --                 --  mixed C-H bending / C-C torsion                                C-H bending 45.45%; C-C torsion 14.87%; C-C-C bending 13.99%; C-C stretching 13.45%
+   22      896.90          --                 --  mixed C-H bending / mixed-phase C-C stretching                 C-H bending 58.83%; mixed-phase C-C stretching 26.70%; C-C torsion 7.84%; C-C-C bending 2.18%
+   23      951.39          --                 --  mixed C-H bending / mixed-phase C-C stretching                 C-H bending 54.03%; mixed-phase C-C stretching 29.23%; C-H out-of-plane bending 7.01%; C-C torsion 3.93%
+   24      998.05          --                 --  mixed mixed-phase C-C stretching / C-H bending                 mixed-phase C-C stretching 51.63%; C-H bending 42.37%; C-C-C bending 2.68%
+   25     1034.31          --                 --  mixed C-H bending / C-O out-of-plane bending                   C-H bending 65.18%; C-O out-of-plane bending 18.81%; C-C torsion 6.67%; C-C-C bending 4.07%
+   26     1067.84          --                 --  mixed C-H bending / mixed-phase C-C stretching                 C-H bending 61.31%; mixed-phase C-C stretching 13.51%; C-C-C bending 8.54%; O-C-C bending 8.07%
+   27     1094.21          --                 --  mixed C-H bending / C-O out-of-plane bending                   C-H bending 51.45%; C-O out-of-plane bending 18.34%; C-C-C bending 14.69%; C-C torsion 7.46%
+   28     1158.20          --                 --  C-H bending                                                    C-H bending 82.15%; opposite-phase C-C stretching 5.91%; C-C-O bending 3.50%; in-phase C-O stretching 2.18%
+   29     1191.08          --                 --  mixed C-H bending / mixed-phase C-C stretching                 C-H bending 55.81%; mixed-phase C-C stretching 23.51%; O-C-C bending 7.35%; C-C-O bending 7.25%
+   30     1237.14          --                 --  C-H bending                                                    C-H bending 70.52%; mixed-phase C-C stretching 16.01%; C-C-O bending 6.71%; C-C torsion 2.44%
+   31     1279.86          --                 --  C-H bending                                                    C-H bending 83.22%; C-C torsion 5.87%; C-H out-of-plane bending 5.17%; C-C stretching 2.07%
+   32     1302.81          --                 --  mixed C-H bending / mixed-phase C-C stretching                 C-H bending 66.21%; mixed-phase C-C stretching 17.20%; C-H out-of-plane bending 5.76%; O-C-C bending 5.13%
+   33     1339.76          --                 --  mixed C-H bending / C-H out-of-plane bending                   C-H bending 45.73%; C-H out-of-plane bending 40.82%; opposite-phase C-C stretching 7.12%; C-C torsion 5.44%
+   34     1394.97          --                 --  mixed C-H out-of-plane bending / C-H bending                   C-H out-of-plane bending 52.11%; C-H bending 42.90%; C-C stretching 4.38%
+   35     1424.14          --                 --  C-H bending                                                    C-H bending 97.07%; C-C stretching 2.57%
+   36     1465.96          --                 --  C-H bending                                                    C-H bending 82.67%; C-C torsion 9.08%; C-H out-of-plane bending 7.04%
+   37     1476.22          --                 --  mixed C-H bending / C-C torsion                                C-H bending 70.26%; C-C torsion 20.93%; C-H out-of-plane bending 7.29%
+   38     1477.29          --                 --  mixed C-H bending / C-C torsion                                C-H bending 57.34%; C-C torsion 20.84%; C-H out-of-plane bending 20.58%
+   39     1484.65          --                 --  mixed C-H out-of-plane bending / C-H bending                   C-H out-of-plane bending 43.87%; C-H bending 41.11%; C-C torsion 13.57%
+   40     1506.18          --                 --  C-H bending                                                    C-H bending 96.64%; C-C torsion 2.22%
+   41     1511.66          --                 --  C-H bending                                                    C-H bending 94.08%; C-H out-of-plane bending 4.68%
+   42     1762.26          --                 --  mixed-phase C-O stretching                                     mixed-phase C-O stretching 79.09%; C-C-C bending 6.99%; C-H bending 6.19%; opposite-phase C-C stretching 5.26%
+   43     1790.55          --                 --  C-O stretching                                                 C-O stretching 79.49%; C-H bending 6.66%; C-C-C bending 6.16%; C-C stretching 5.62%
+   44     3029.43          --                 --  C-H stretching                                                 C-H stretching 99.39%
+   45     3032.86          --                 --  C-H stretching                                                 C-H stretching 99.63%
+   46     3042.68          --                 --  in-phase C-H stretching                                        in-phase C-H stretching 99.74%
+   47     3059.76          --                 --  C-H stretching                                                 C-H stretching 99.47%
+   48     3093.64          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 99.69%
+   49     3095.24          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 99.13%
+   50     3109.50          --                 --  opposite-phase C-H stretching                                  opposite-phase C-H stretching 99.52%
+   51     3117.41          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 99.71%
+   52     3133.46          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 99.29%
+   53     3147.40          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 99.38%
+
+# Selected internal-coordinate set:
+#   1  nu(C1-C2)
+#   2  nu(C3-C5)
+#   3  nu(C6-O8)
+#   4  nu(C7-H16)
+#   5  nu(C5-H14)
+#   6  nu(C7-H18)
+#   7  nu(C2-H13)
+#   8  nu(C1-H11)
+#   9  nu(C3-O4)
+#  10  nu(C1-H9)
+#  11  nu(C7-H17)
+#  12  nu(C2-H12)
+#  13  nu(C5-H15)
+#  14  nu(C1-H10)
+#  15  gamma(O4;C3,C2,C5)
+#  16  gamma(O8;C6,C5,C7)
+#  17  delta(C7-C6-O8)
+#  18  gamma(H17;C7,H16,H18)
+#  19  gamma(H12;C2,C1,H13)
+#  20  delta(H14-C5-H15)
+#  21  delta(H9-C1-H11)
+#  22  delta(H16-C7-H18)
+#  23  delta(O4-C3-C5)
+#  24  delta(H10-C1-H11)
+#  25  delta(H9-C1-H10)
+#  26  delta(C3-C5-H15)
+#  27  tau(C5-C6-C7-H17)
+#  28  delta(C1-C2-H13)
+#  29  delta(C3-C5-H14)
+#  30  tau(H12-C2-C3-C5)
+#  31  nu(C6-C7)
+#  32  delta(C2-C1-H10)
+#  33  delta(C6-C7-H17)
+#  34  delta(C3-C2-H12)
+#  35  delta(C6-C5-H14)
+#  36  nu(C5-C6)
+#  37  nu(C2-C3)
+#  38  delta(C2-C1-H11)
+#  39  delta(C6-C7-H16)
+#  40  tau(H11-C1-C2-C3)
+#  41  tau(O8-C6-C7-H18)
+#  42  delta(C5-C6-C7)
+#  43  delta(C1-C2-C3)
+#  44  delta(C2-C3-C5)
+#  45  delta(C3-C5-C6)
+#  46  tau(H15-C5-C6-C7)
+#  47  tau(C1-C2-C3-C5)
+#  48  tau(C2-C3-C5-C6)
+
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/123639/123639_summary.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/123639/123639_families.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/123639/123639_ped.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/123639/123639_ir_transitions.csv
+
+# All generated files are in: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/123639
+# Manifest: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/123639/123639_manifest.txt
+
+--- stderr ---
+Normal modes/frequencies absent or incomplete: diagonalizing Hessian.

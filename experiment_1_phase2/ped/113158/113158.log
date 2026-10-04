@@ -1,0 +1,146 @@
+# Contact: romi@lens.unifi.it
+# Manual: https://github.com/SebRoLENS/orca-ped-analyzer/blob/main/docs/ORCA_PED_Analyzer_Manual.md
+# Check GitHub for updates and new releases: https://github.com/SebRoLENS/orca-ped-analyzer
+#
+# Molecule: 22 atoms | non-linear
+# Bonds inferred: 23 | candidate ICs: 228 | selected ICs: 60
+# Cartesian-Hessian reconstruction relative error: 5.482e-05
+# Energy distribution: PED (PED is the backward-compatible default; TED includes kinetic-energy terms)
+# Ring/cycle bonds detected: 6 | ring atoms: 5 | ring systems: 1
+# VPT2: no matching .out file supplied/found -> harmonic/PED analysis only
+#
+ Mode   Harm/cm-1   VPT2/cm-1  Harm.Int/km mol-1  Assignment                                                     Grouped PED
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    6       52.03          --                 --  C-C torsion                                                    C-C torsion 89.73%; C-H bending 3.61%; ring-site C-H out-of-plane bending 2.57%
+    7       76.41          --                 --  C-C torsion                                                    C-C torsion 99.69%
+    8      109.78          --                 --  mixed C-C-C bending / C-H bending                              C-C-C bending 59.94%; C-H bending 10.39%; C-C torsion 9.26%; ring-site C-H out-of-plane bending 6.17%
+    9      132.16          --                 --  C-C torsion                                                    C-C torsion 79.92%; C-H bending 7.25%; C-C-C bending 3.83%; ring-site C-H out-of-plane bending 3.27%
+   10      233.55          --                 --  mixed ring-site C-H out-of-plane bending / cyclic-ring torsional/out-of-plane deformation ring-site C-H out-of-plane bending 53.77%; cyclic-ring torsional/out-of-plane deformation 24.08%; C-C-C bending 9.18%; O-C-C bending 4.48%
+   11      252.18          --                 --  C-O torsion                                                    C-O torsion 80.56%; C-C torsion 5.16%; ring-site C-H out-of-plane bending 3.20%; C-H bending 2.71%
+   12      278.04          --                 --  mixed C-C torsion / C-C-C bending                              C-C torsion 55.28%; C-C-C bending 15.87%; C-C-N bending 10.53%; cyclic-ring torsional/out-of-plane deformation 3.89%
+   13      331.54          --                 --  mixed ring-site C-H out-of-plane bending / cyclic-ring torsional/out-of-plane deformation ring-site C-H out-of-plane bending 49.99%; cyclic-ring torsional/out-of-plane deformation 34.49%; C-C-C bending 7.83%; C-C torsion 2.11%
+   14      389.96          --                 --  mixed ring-site C-H out-of-plane bending / cyclic-ring torsional/out-of-plane deformation ring-site C-H out-of-plane bending 56.58%; cyclic-ring torsional/out-of-plane deformation 17.58%; O-C-C bending 9.07%; C-C stretching 3.39%
+   15      500.28          --                 --  mixed ring-site C-H out-of-plane bending / O-C-C bending       ring-site C-H out-of-plane bending 38.07%; O-C-C bending 14.06%; cyclic-ring torsional/out-of-plane deformation 13.13%; C-C-C bending 10.43%
+   16      569.55          --                 --  mixed C-C torsion / cyclic-ring torsional/out-of-plane deformation C-C torsion 33.91%; cyclic-ring torsional/out-of-plane deformation 21.90%; C-C-C bending 13.46%; ring-site C-H out-of-plane bending 10.32%
+   17      694.54          --                 --  mixed C-C torsion / opposite-phase cyclic C-N stretching       C-C torsion 34.74%; opposite-phase cyclic C-N stretching 33.85%; ring-site C-H out-of-plane bending 11.33%; cyclic-ring deformation (C-N-C bend) 10.64%
+   18      761.88          --                 --  mixed C-C torsion / cyclic-ring deformation (C-N-C bend) / in-phase cyclic C-N stretching C-C torsion 27.25%; cyclic-ring deformation (C-N-C bend) 20.92%; in-phase cyclic C-N stretching 16.97%; C-H bending 13.69%
+   19      778.53          --                 --  mixed C-C torsion / C-H bending                                C-C torsion 50.84%; C-H bending 33.96%; in-phase cyclic C-N stretching 6.28%; ring-site C-H out-of-plane bending 3.00%
+   20      786.02          --                 --  mixed cyclic-ring deformation (C-N-C bend) / ring-site C-H out-of-plane bending cyclic-ring deformation (C-N-C bend) 37.33%; ring-site C-H out-of-plane bending 20.58%; ring-site C-H in-plane bending 14.94%; cyclic C-N stretching 7.66%
+   21      794.73          --                 --  mixed ring-site C-H in-plane bending / ring-site C-H out-of-plane bending ring-site C-H in-plane bending 45.80%; ring-site C-H out-of-plane bending 38.29%; mixed-phase cyclic C-C stretching 6.24%; cyclic-ring deformation (C-N-C bend) 4.15%
+   22      875.69          --                 --  C-H bending                                                    C-H bending 71.74%; mixed-phase cyclic C-N stretching 9.25%; ring-site C-H out-of-plane bending 5.26%; C-C torsion 3.94%
+   23      918.52          --                 --  mixed mixed-phase cyclic C-C stretching / C-H bending          mixed-phase cyclic C-C stretching 24.55%; C-H bending 21.83%; cyclic C-N stretching 11.80%; ring-site C-H out-of-plane bending 11.33%
+   24      952.36          --                 --  mixed ring-site C-H out-of-plane bending / mixed-phase cyclic C-N stretching ring-site C-H out-of-plane bending 43.53%; mixed-phase cyclic C-N stretching 30.02%; C-H bending 6.73%; ring-site C-H in-plane bending 4.84%
+   25      981.72          --                 --  mixed cyclic C-C stretching / cyclic C-N stretching            cyclic C-C stretching 42.34%; cyclic C-N stretching 11.30%; exocyclic C-C stretching 10.98%; C-H bending 7.55%
+   26      996.13          --                 --  mixed cyclic C-C stretching / ring-site C-H out-of-plane bending cyclic C-C stretching 28.16%; ring-site C-H out-of-plane bending 20.94%; ring-site C-H in-plane bending 12.62%; cyclic-ring out-of-plane deformation 9.96%
+   27     1018.25          --                 --  mixed C-C stretching / cyclic C-N stretching                   C-C stretching 23.33%; cyclic C-N stretching 14.04%; ring-site C-H out-of-plane bending 11.35%; C-C-C bending 10.50%
+   28     1034.25          --                 --  mixed mixed-phase C-C stretching / C-O stretching              mixed-phase C-C stretching 47.00%; C-O stretching 35.70%; C-H bending 5.14%; cyclic-ring out-of-plane deformation 2.79%
+   29     1048.61          --                 --  mixed mixed-phase C-C stretching / C-O stretching              mixed-phase C-C stretching 22.62%; C-O stretching 16.54%; ring-site C-H out-of-plane bending 14.03%; C-H bending 12.72%
+   30     1064.66          --                 --  mixed C-O stretching / cyclic-ring out-of-plane deformation    C-O stretching 26.53%; cyclic-ring out-of-plane deformation 16.54%; mixed-phase C-C stretching 13.57%; C-C-C bending 12.58%
+   31     1085.63          --                 --  mixed ring-site C-H out-of-plane bending / cyclic-ring out-of-plane deformation ring-site C-H out-of-plane bending 34.37%; cyclic-ring out-of-plane deformation 20.73%; cyclic-ring torsional/out-of-plane deformation 14.83%; ring-site C-H in-plane bending 6.59%
+   32     1134.98          --                 --  mixed ring-site C-H out-of-plane bending / C-H bending         ring-site C-H out-of-plane bending 43.25%; C-H bending 23.48%; cyclic-ring torsional/out-of-plane deformation 7.86%; mixed-phase cyclic C-N stretching 7.66%
+   33     1146.53          --                 --  mixed ring-site C-H out-of-plane bending / ring-site C-H in-plane bending ring-site C-H out-of-plane bending 44.77%; ring-site C-H in-plane bending 12.74%; exocyclic C-C stretching 9.40%; cyclic-ring out-of-plane deformation 8.55%
+   34     1181.91          --                 --  mixed ring-site C-H out-of-plane bending / C-H bending         ring-site C-H out-of-plane bending 37.97%; C-H bending 35.55%; cyclic-ring torsional/out-of-plane deformation 10.29%; ring-site C-H in-plane bending 4.51%
+   35     1220.01          --                 --  mixed ring-site C-H in-plane bending / C-H bending / ring-site C-H out-of-plane bending ring-site C-H in-plane bending 39.66%; C-H bending 23.55%; ring-site C-H out-of-plane bending 20.86%; C-C torsion 9.87%
+   36     1223.17          --                 --  mixed C-H bending / ring-site C-H in-plane bending / C-C torsion C-H bending 42.81%; ring-site C-H in-plane bending 19.29%; C-C torsion 18.35%; ring-site C-H out-of-plane bending 15.06%
+   37     1234.67          --                 --  mixed C-H bending / O-H bending                                C-H bending 49.09%; O-H bending 28.70%; C-C torsion 8.07%; C-C stretching 5.06%
+   38     1251.41          --                 --  mixed ring-site C-H out-of-plane bending / ring-site C-H in-plane bending ring-site C-H out-of-plane bending 35.10%; ring-site C-H in-plane bending 17.70%; cyclic C-C stretching 12.53%; C-H bending 7.72%
+   39     1272.41          --                 --  mixed ring-site C-H out-of-plane bending / ring-site C-H in-plane bending ring-site C-H out-of-plane bending 58.09%; ring-site C-H in-plane bending 16.12%; opposite-phase cyclic C-C stretching 15.64%; C-H bending 5.29%
+   40     1298.44          --                 --  mixed ring-site C-H out-of-plane bending / ring-site C-H in-plane bending / C-H bending ring-site C-H out-of-plane bending 34.73%; ring-site C-H in-plane bending 24.48%; C-H bending 19.24%; C-C torsion 6.85%
+   41     1307.33          --                 --  mixed C-H bending / ring-site C-H out-of-plane bending         C-H bending 53.39%; ring-site C-H out-of-plane bending 16.20%; C-C torsion 13.84%; ring-site C-H in-plane bending 6.06%
+   42     1310.87          --                 --  C-H bending                                                    C-H bending 78.77%; C-C torsion 13.05%
+   43     1326.43          --                 --  C-H bending                                                    C-H bending 90.49%; C-C torsion 7.91%
+   44     1365.66          --                 --  mixed ring-site C-H out-of-plane bending / ring-site C-H in-plane bending / opposite-phase cyclic C-C stretching ring-site C-H out-of-plane bending 31.90%; ring-site C-H in-plane bending 27.61%; opposite-phase cyclic C-C stretching 16.43%; C-H bending 11.19%
+   45     1386.54          --                 --  C-H bending                                                    C-H bending 79.13%; mixed-phase C-C stretching 6.41%; ring-site C-H in-plane bending 3.26%; cyclic C-C stretching 2.73%
+   46     1455.49          --                 --  mixed C-H bending / ring-site C-H out-of-plane bending         C-H bending 34.87%; ring-site C-H out-of-plane bending 28.39%; cyclic C-C stretching 11.92%; exocyclic C-C stretching 7.52%
+   47     1461.44          --                 --  mixed C-H bending / ring-site C-H out-of-plane bending         C-H bending 69.32%; ring-site C-H out-of-plane bending 9.33%; O-H bending 5.20%; C-C stretching 5.20%
+   48     1486.60          --                 --  C-H bending                                                    C-H bending 80.98%; ring-site C-H out-of-plane bending 7.97%; C-C torsion 5.50%; ring-site C-H in-plane bending 3.51%
+   49     1500.09          --                 --  mixed C-H bending / ring-site C-H out-of-plane bending         C-H bending 43.12%; ring-site C-H out-of-plane bending 42.19%; ring-site C-H in-plane bending 7.47%; C-C torsion 3.41%
+   50     1505.31          --                 --  mixed C-H bending / C-C torsion                                C-H bending 49.99%; C-C torsion 43.48%; ring-site C-H out-of-plane bending 4.44%
+   51     1521.75          --                 --  mixed ring-site C-H out-of-plane bending / C-H bending         ring-site C-H out-of-plane bending 53.22%; C-H bending 27.71%; ring-site C-H in-plane bending 11.50%; C-C torsion 4.28%
+   52     1531.21          --                 --  C-H bending                                                    C-H bending 87.67%; C-C torsion 10.51%
+   53     2968.70          --                 --  in-phase C-H stretching                                        in-phase C-H stretching 99.38%
+   54     2994.43          --                 --  opposite-phase C-H stretching                                  opposite-phase C-H stretching 99.11%
+   55     3016.04          --                 --  C-H stretching                                                 C-H stretching 99.06%
+   56     3038.75          --                 --  C-H stretching                                                 C-H stretching 99.33%
+   57     3046.66          --                 --  mixed-phase ring-site C-H stretching                           mixed-phase ring-site C-H stretching 99.37%
+   58     3055.08          --                 --  ring-site C-H stretching                                       ring-site C-H stretching 85.68%; mixed-phase C-H stretching 13.57%
+   59     3063.53          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 85.36%; ring-site C-H stretching 13.83%
+   60     3084.04          --                 --  mixed-phase C-H stretching                                     mixed-phase C-H stretching 96.06%; ring-site C-H stretching 3.29%
+   61     3101.57          --                 --  mixed-phase ring-site C-H stretching                           mixed-phase ring-site C-H stretching 98.73%
+   62     3114.35          --                 --  ring-site C-H stretching                                       ring-site C-H stretching 95.51%; C-H stretching 3.79%
+   63     3119.62          --                 --  mixed-phase ring-site C-H stretching                           mixed-phase ring-site C-H stretching 99.11%
+   64     3148.98          --                 --  ring-site C-H stretching                                       ring-site C-H stretching 99.03%
+   65     3820.36          --                 --  O-H stretching                                                 O-H stretching 99.92%
+
+# Selected internal-coordinate set:
+#   1  nu(O1-C2)
+#   2  nu(C3-C4)
+#   3  nu(C5-C6)
+#   4  nu(C7-C8)
+#   5  nu(C8-N9)
+#   6  nu(O1-H10)
+#   7  nu(C4-H15)
+#   8  nu(C3-H14)
+#   9  nu(C2-H12)
+#  10  nu(C7-H19)
+#  11  nu(C5-H17)
+#  12  nu(C4-H16)
+#  13  nu(C3-H13)
+#  14  nu(C2-H11)
+#  15  nu(C6-N9)
+#  16  nu(C8-H21)
+#  17  nu(C6-C7)
+#  18  nu(C5-N9)
+#  19  nu(C8-H22)
+#  20  nu(C7-H20)
+#  21  tau(H10-O1-C2-H12)
+#  22  tau(H13-C3-C4-H15)
+#  23  nu(C6-H18)
+#  24  tau(H14-C3-C4-H16)
+#  25  delta(C2-O1-H10)
+#  26  gamma(N9;C6,C7,H18)
+#  27  tau(H16-C4-C5-H17)
+#  28  tau(H19-C7-C8-H22)
+#  29  tau(H20-C7-C8-H21)
+#  30  delta(C3-C4-H15)
+#  31  delta(H11-C2-H12)
+#  32  delta(C4-C3-H14)
+#  33  delta(C4-C3-H13)
+#  34  gamma(H17;C5,C6,N9)
+#  35  delta(C8-C7-H20)
+#  36  delta(O1-C2-H12)
+#  37  delta(C7-C8-H21)
+#  38  tau(C5-C6-C7-H19)
+#  39  delta(C7-C6-H18)
+#  40  delta(C7-C8-H22)
+#  41  delta(C3-C2-H11)
+#  42  delta(C3-C4-H16)
+#  43  tau(H19-C7-C8-N9)
+#  44  tau(C6-C7-C8-H21)
+#  45  delta(C4-C5-N9)
+#  46  nu(C2-C3)
+#  47  delta(C3-C2-H12)
+#  48  nu(C4-C5)
+#  49  delta(H15-C4-H16)
+#  50  delta(C6-N9-C8)
+#  51  delta(C4-C5-C6)
+#  52  delta(O1-C2-C3)
+#  53  tau(O1-C2-C3-C4)
+#  54  delta(C2-C3-H14)
+#  55  tau(C2-C3-C4-C5)
+#  56  tau(C7-C6-N9-C8)
+#  57  delta(C2-C3-C4)
+#  58  tau(H17-C5-C6-C7)
+#  59  delta(C3-C4-C5)
+#  60  tau(C5-C6-N9-C8)
+
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/113158/113158_summary.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/113158/113158_families.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/113158/113158_ped.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/113158/113158_ir_transitions.csv
+
+# All generated files are in: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/113158
+# Manifest: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/113158/113158_manifest.txt
+
+--- stderr ---
+Normal modes/frequencies absent or incomplete: diagonalizing Hessian.

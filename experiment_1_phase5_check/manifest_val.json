@@ -1,0 +1,48 @@
+{
+  "created": "2026-10-03 00:16:17",
+  "args": {
+    "phase2": "experiment_1_phase2",
+    "phase3": "experiment_1_phase3",
+    "out": "experiment_1_phase5_check",
+    "arms": "A,B_modes_off",
+    "train_split": "train_10000",
+    "split": "val",
+    "epochs": "2",
+    "decoding": "default,greedy",
+    "select_decoding": "default",
+    "conditions": "IR,Raman,IR+Raman",
+    "n_samples": 1,
+    "batch_size": 8,
+    "max_new_tokens": 64,
+    "seed": 20261001,
+    "backend": "auto",
+    "limit": 20
+  },
+  "decoding": {
+    "default": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "greedy": {
+      "do_sample": false,
+      "temperature": null,
+      "top_k": null,
+      "top_p": null
+    }
+  },
+  "epochs": {
+    "A": [
+      2
+    ],
+    "B_modes_off": [
+      2
+    ]
+  },
+  "base": {
+    "model": "unsloth/Qwen3-8B",
+    "load_in_4bit": false,
+    "backend": "unsloth"
+  }
+}

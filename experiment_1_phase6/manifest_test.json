@@ -1,0 +1,40 @@
+{
+  "created": "2026-10-03 21:47:06",
+  "args": {
+    "phase5": "experiment_1_phase5",
+    "phase2": "experiment_1_phase2",
+    "out": "experiment_1_phase6",
+    "split": "test",
+    "train_split": "train_10000",
+    "compare": "B_modes_on:A,B_modes_off:A,B_modes_on:B_modes_off,A:A_native",
+    "primary_decoding": "default",
+    "workers": 16,
+    "seed": 20261001,
+    "skip_mces": false
+  },
+  "mces": true,
+  "runs": {
+    "A|3|default": 3000,
+    "A|3|greedy": 3000,
+    "A_native|3|default": 3000,
+    "A_native|3|greedy": 3000,
+    "B_modes_off|3|default": 3000,
+    "B_modes_off|3|greedy": 3000,
+    "B_modes_on|3|default": 3000,
+    "B_modes_on|3|greedy": 3000
+  },
+  "definitions": {
+    "tanimoto": "Morgan radius 2, 2048 bits, binary",
+    "cosine": "same binary fingerprint",
+    "mces": "myopic MCES distance, threshold 15",
+    "fg": "Jaccard over the 17 Table 8 SMARTS, verbatim",
+    "fraggle": "RDKit FraggleSim.GetFraggleSimilarity(prediction, reference)",
+    "targets": "stereo-free canonical SMILES"
+  },
+  "versions": {
+    "rdkit": "2026.03.5",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5"
+  },
+  "runtime_s": 77.5
+}

@@ -1,0 +1,135 @@
+{
+  "created": "2026-10-01 22:20:18",
+  "args": {
+    "phase1": "experiment_1",
+    "pt": "qm9s.pt",
+    "zip": "qm9s_csv.zip",
+    "ir_csv": "ir_boraden.csv",
+    "raman_csv": "raman_boraden.csv",
+    "analyzer": "orca-ped-analyzer/orca_ped_analyzer.py",
+    "out": "experiment_1_phase2",
+    "workers": 32,
+    "python": "/local/scratch/mv487/miniforge3/envs/unsloth_env/bin/python",
+    "match_tol": 10.0,
+    "scale": null,
+    "cal_sample": 300,
+    "cal_min_r": 0.9,
+    "tokenizer": "Qwen/Qwen3-8B",
+    "seed": 20261001
+  },
+  "phase1_manifest": "experiment_1/manifest.json",
+  "config_components_v3": {
+    "INCLUDE_MODES": true,
+    "POS_DP": 0,
+    "INT_DP": 2,
+    "RANGE": [
+      500,
+      4000
+    ],
+    "MIN_INT": 0.1,
+    "BIN_WIDTH": 250,
+    "BIN_THRESHOLDS": [
+      [
+        "vs",
+        0.7
+      ],
+      [
+        "s",
+        0.5
+      ],
+      [
+        "m",
+        0.2
+      ],
+      [
+        "w",
+        0.1
+      ]
+    ],
+    "JOINT_ORDER": [
+      "IR",
+      "Raman"
+    ],
+    "NOT_FOUND": "not found"
+  },
+  "spectrallm_format": {
+    "min_intensity_native": 0.1,
+    "width_rel_height": 0.7
+  },
+  "calibration": {
+    "IR": {
+      "axis": "asc_500_4000",
+      "variant": "ir",
+      "scale": 0.965,
+      "fwhm": 15.0,
+      "median_r": 0.9999,
+      "p05_r": 0.9984,
+      "n_spectra": 300,
+      "peak_err_median_all": 0.39,
+      "peak_err_median_isolated": 0.3,
+      "n_isolated_peaks": 498
+    },
+    "Raman": {
+      "axis": "spectrallm",
+      "variant": "activity_then_factor",
+      "scale": 0.965,
+      "fwhm": 10.0,
+      "median_r": 0.9492,
+      "p05_r": 0.8648,
+      "n_spectra": 300,
+      "peak_err_median_all": 0.36,
+      "peak_err_median_isolated": 0.26,
+      "n_isolated_peaks": 660
+    }
+  },
+  "split_report": {
+    "test": {
+      "requested": 1000,
+      "dropped": 0,
+      "backfilled": 0,
+      "final": 1000
+    },
+    "val": {
+      "requested": 500,
+      "dropped": 0,
+      "backfilled": 0,
+      "final": 500
+    },
+    "train_10000": {
+      "requested": 10000,
+      "dropped": 0,
+      "backfilled": 0,
+      "final": 10000
+    },
+    "train_3000": {
+      "requested": 3000,
+      "dropped": 0,
+      "backfilled": 0,
+      "final": 3000
+    },
+    "train_1000": {
+      "requested": 1000,
+      "dropped": 0,
+      "backfilled": 0,
+      "final": 1000
+    }
+  },
+  "arms": [
+    "A",
+    "A_native",
+    "B_modes_off",
+    "B_modes_on"
+  ],
+  "conditions": [
+    "IR",
+    "Raman",
+    "IR+Raman"
+  ],
+  "token_audit_method": "Qwen/Qwen3-8B",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1"
+  },
+  "runtime_s": 60.2
+}

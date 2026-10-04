@@ -1,0 +1,80 @@
+{
+  "created": "2026-10-03 14:10:11",
+  "args": {
+    "phase2": "experiment_1_phase2",
+    "arm": "A_native",
+    "out": "experiment_1_phase3",
+    "train_split": "train_10000",
+    "val_split": "val",
+    "conditions": "IR,Raman,IR+Raman",
+    "bucket_arm": "A",
+    "model": "unsloth/Qwen3-8B",
+    "backend": "auto",
+    "load_in_4bit": false,
+    "max_seq_len": 4096,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_targets": "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",
+    "epochs": 3,
+    "lr": 0.0001,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "eval_batch_size": 8,
+    "warmup_frac": 0.05,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "seed": 20261001,
+    "log_steps": 25,
+    "ckpt_minutes": 30.0,
+    "resume": true,
+    "smoke": false
+  },
+  "backend": "unsloth",
+  "run_dir": "experiment_1_phase3/A_native__train_10000",
+  "data": {
+    "train": {
+      "path": "experiment_1_phase2/prompts/A_native/train_10000.jsonl",
+      "sha256": "8b00a7dfa47d1ab1855dd141301c85ae21768056ea661ddbef5475dcaf66e240",
+      "examples": 30000
+    },
+    "val": {
+      "path": "experiment_1_phase2/prompts/A_native/val.jsonl",
+      "sha256": "c0ed1f1d9b8e8c04a20387815d74cf7916b64a5204ad1365f5f41af3c16e542b",
+      "examples": 1500
+    }
+  },
+  "tokens": {
+    "mean": 457.1583492063492,
+    "p95": 761.0,
+    "max": 1048,
+    "train_tokens_per_epoch": 13714607
+  },
+  "batch_order_fingerprint": "f3eb4ca1039910d3",
+  "trainable_parameters": 43646976,
+  "optimiser_steps": 5625,
+  "steps_per_epoch": 1875,
+  "val_loss_by_epoch": [
+    {
+      "epoch": 1,
+      "step": 1875,
+      "val_loss": 0.5916
+    },
+    {
+      "epoch": 2,
+      "step": 3750,
+      "val_loss": 0.55592
+    },
+    {
+      "epoch": 3,
+      "step": 5625,
+      "val_loss": 0.61539
+    }
+  ],
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.5.0",
+    "peft": "0.20.0"
+  },
+  "gpu": "NVIDIA L40S",
+  "runtime_h": 3.455
+}

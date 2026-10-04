@@ -1,0 +1,74 @@
+# Contact: romi@lens.unifi.it
+# Manual: https://github.com/SebRoLENS/orca-ped-analyzer/blob/main/docs/ORCA_PED_Analyzer_Manual.md
+# Check GitHub for updates and new releases: https://github.com/SebRoLENS/orca-ped-analyzer
+#
+# Molecule: 10 atoms | non-linear
+# Bonds inferred: 9 | candidate ICs: 60 | selected ICs: 24
+# Cartesian-Hessian reconstruction relative error: 1.055e-05
+# Energy distribution: PED (PED is the backward-compatible default; TED includes kinetic-energy terms)
+# Ring/cycle bonds detected: 0 | ring atoms: 0 | ring systems: 0
+# VPT2: no matching .out file supplied/found -> harmonic/PED analysis only
+#
+ Mode   Harm/cm-1   VPT2/cm-1  Harm.Int/km mol-1  Assignment                                                     Grouped PED
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    6      106.59          --                 --  C-C torsion                                                    C-C torsion 99.57%
+    7      171.28          --                 --  mixed C-C-C bending / C-C-N linear bending                     C-C-C bending 44.55%; C-C-N linear bending 26.31%; C-C torsion 13.63%; O-C-C bending 9.17%
+    8      243.01          --                 --  mixed C-O torsion / C-C torsion                                C-O torsion 73.42%; C-C torsion 24.81%
+    9      390.48          --                 --  mixed O-C-C bending / C-C torsion                              O-C-C bending 60.65%; C-C torsion 11.09%; C-C-N linear bending 10.08%; C-H bending 8.94%
+   10      391.01          --                 --  C-C torsion                                                    C-C torsion 88.03%; C-C-N linear bending 11.93%
+   11      534.08          --                 --  mixed C-C-N linear bending / C-C-C bending / C-C torsion       C-C-N linear bending 34.44%; C-C-C bending 25.64%; C-C torsion 15.45%; C-C stretching 14.58%
+   12      805.52          --                 --  mixed C-C torsion / C-H bending                                C-C torsion 66.40%; C-H bending 32.98%
+   13      947.07          --                 --  mixed C-C stretching / C-C-C bending                           C-C stretching 61.98%; C-C-C bending 11.70%; O-C-C bending 10.54%; O-H bending 6.02%
+   14     1012.19          --                 --  mixed-phase C-C stretching                                     mixed-phase C-C stretching 75.20%; O-H bending 10.13%; C-C torsion 4.40%; C-H bending 2.98%
+   15     1062.85          --                 --  C-O stretching                                                 C-O stretching 86.63%; O-C-C bending 4.52%; C-C-C bending 4.39%
+   16     1095.39          --                 --  C-C torsion                                                    C-C torsion 84.17%; C-H bending 14.73%
+   17     1233.91          --                 --  mixed C-C torsion / C-H bending                                C-C torsion 75.13%; C-H bending 24.57%
+   18     1238.63          --                 --  mixed O-H bending / C-H bending                                O-H bending 56.65%; C-H bending 20.90%; C-C torsion 10.00%; C-C stretching 8.48%
+   19     1316.28          --                 --  C-H bending                                                    C-H bending 96.66%; C-C torsion 3.26%
+   20     1335.81          --                 --  mixed C-H bending / C-C torsion                                C-H bending 49.25%; C-C torsion 31.92%; O-H bending 8.17%; mixed-phase C-C stretching 7.28%
+   21     1458.66          --                 --  mixed C-H bending / O-H bending                                C-H bending 69.35%; O-H bending 11.53%; C-C stretching 11.31%; C-C torsion 5.46%
+   22     1477.18          --                 --  C-C torsion                                                    C-C torsion 94.39%; C-H bending 4.23%
+   23     1532.98          --                 --  C-C torsion                                                    C-C torsion 87.81%; C-H bending 9.26%
+   24     2366.41          --                 --  C-N stretching                                                 C-N stretching 90.17%; C-C stretching 9.75%
+   25     3005.07          --                 --  in-phase C-H stretching                                        in-phase C-H stretching 99.47%
+   26     3039.72          --                 --  opposite-phase C-H stretching                                  opposite-phase C-H stretching 98.81%
+   27     3056.89          --                 --  in-phase C-H stretching                                        in-phase C-H stretching 99.48%
+   28     3098.48          --                 --  opposite-phase C-H stretching                                  opposite-phase C-H stretching 99.49%
+   29     3824.09          --                 --  O-H stretching                                                 O-H stretching 99.93%
+
+# Selected internal-coordinate set:
+#   1  nu(C2-C3)
+#   2  nu(O1-H6)
+#   3  nu(C4-N5)
+#   4  nu(C3-H9)
+#   5  nu(C2-H7)
+#   6  nu(C3-H10)
+#   7  nu(C2-H8)
+#   8  delta_lin2(C3-C4-N5)
+#   9  delta_lin1(C3-C4-N5)
+#  10  nu(O1-C2)
+#  11  tau(H6-O1-C2-C3)
+#  12  tau(H7-C2-C3-H9)
+#  13  tau(H8-C2-C3-H10)
+#  14  delta(C2-O1-H6)
+#  15  delta(C2-C3-H9)
+#  16  delta(C2-C3-H10)
+#  17  delta(C3-C2-H8)
+#  18  delta(C3-C2-H7)
+#  19  nu(C3-C4)
+#  20  tau(O1-C2-C3-H9)
+#  21  tau(O1-C2-C3-H10)
+#  22  delta(O1-C2-C3)
+#  23  tau(O1-C2-C3-C4)
+#  24  delta(C2-C3-C4)
+
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/116/116_summary.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/116/116_families.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/116/116_ped.csv
+Wrote: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/116/116_ir_transitions.csv
+
+# All generated files are in: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/116
+# Manifest: /local/scratch/mv487/qm9s/experiment_1_phase2/ped/116/116_manifest.txt
+
+--- stderr ---
+Normal modes/frequencies absent or incomplete: diagonalizing Hessian.

@@ -1,0 +1,16 @@
+# Contact: romi@lens.unifi.it
+# Manual: https://github.com/SebRoLENS/orca-ped-analyzer/blob/main/docs/ORCA_PED_Analyzer_Manual.md
+# Check GitHub for updates and new releases: https://github.com/SebRoLENS/orca-ped-analyzer
+#
+
+--- stderr ---
+Normal modes/frequencies absent or incomplete: diagonalizing Hessian.
+Traceback (most recent call last):
+  File "/local/scratch/mv487/qm9s/orca-ped-analyzer/orca_ped_analyzer.py", line 1868, in <module>
+    main()
+  File "/local/scratch/mv487/qm9s/orca-ped-analyzer/orca_ped_analyzer.py", line 1477, in main
+    chosen_idx=select_nonredundant(candidates,Bcand,target)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local/scratch/mv487/qm9s/orca-ped-analyzer/orca_ped_analyzer.py", line 936, in select_nonredundant
+    raise RuntimeError(
+RuntimeError: Could construct only 40 independent ICs; need 42. Candidate B rank=40. Geometry may contain unsupported topology/linearities.

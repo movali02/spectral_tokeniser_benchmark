@@ -1,0 +1,80 @@
+{
+  "created": "2026-10-02 23:06:55",
+  "args": {
+    "phase2": "experiment_1_phase2",
+    "arm": "B_modes_off",
+    "out": "experiment_1_phase3",
+    "train_split": "train_10000",
+    "val_split": "val",
+    "conditions": "IR,Raman,IR+Raman",
+    "bucket_arm": "A",
+    "model": "unsloth/Qwen3-8B",
+    "backend": "auto",
+    "load_in_4bit": false,
+    "max_seq_len": 4096,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_targets": "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",
+    "epochs": 3,
+    "lr": 0.0001,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "eval_batch_size": 8,
+    "warmup_frac": 0.05,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "seed": 20261001,
+    "log_steps": 25,
+    "ckpt_minutes": 120.0,
+    "resume": true,
+    "smoke": false
+  },
+  "backend": "unsloth",
+  "run_dir": "experiment_1_phase3/B_modes_off__train_10000",
+  "data": {
+    "train": {
+      "path": "experiment_1_phase2/prompts/B_modes_off/train_10000.jsonl",
+      "sha256": "b58204bb1f434981cdaa94e00ca65fb66ff8ee35c0129c7fa442147c7caa352e",
+      "examples": 30000
+    },
+    "val": {
+      "path": "experiment_1_phase2/prompts/B_modes_off/val.jsonl",
+      "sha256": "d62b4e335f4ec4851db7d340c44c4f462069d7d76bea2614c2494affdb94b32d",
+      "examples": 1500
+    }
+  },
+  "tokens": {
+    "mean": 853.1720634920634,
+    "p95": 1420.0,
+    "max": 1935,
+    "train_tokens_per_epoch": 25594299
+  },
+  "batch_order_fingerprint": "f3eb4ca1039910d3",
+  "trainable_parameters": 43646976,
+  "optimiser_steps": 5625,
+  "steps_per_epoch": 1875,
+  "val_loss_by_epoch": [
+    {
+      "epoch": 1,
+      "step": 1875,
+      "val_loss": 0.56877
+    },
+    {
+      "epoch": 2,
+      "step": 3750,
+      "val_loss": 0.52966
+    },
+    {
+      "epoch": 3,
+      "step": 5625,
+      "val_loss": 0.59202
+    }
+  ],
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.5.0",
+    "peft": "0.20.0"
+  },
+  "gpu": "NVIDIA L40S",
+  "runtime_h": 6.603
+}

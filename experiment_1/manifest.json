@@ -1,0 +1,127 @@
+{
+  "created": "2026-10-01 17:25:28",
+  "args": {
+    "pt": "qm9s.pt",
+    "zip": "qm9s_csv.zip",
+    "out": "experiment_1",
+    "workers": 32,
+    "n_test": 1000,
+    "n_val": 500,
+    "n_train": 10000,
+    "train_subsets": "3000,1000",
+    "n_reserve": 200,
+    "seed": 20261001,
+    "min_stratum": 20,
+    "balance_tol": 0.02,
+    "geometry_check": "flag",
+    "no_hash": false,
+    "inspect_zip": false,
+    "spectrallm_test_smi": "qm9s_number_test.smi",
+    "spectrallm_trainval_smi": "qm9s_number_trainval.smi"
+  },
+  "fields_pt": {
+    "id": "number",
+    "smiles": "smile",
+    "z": "z",
+    "pos": "pos",
+    "Hi": "Hi",
+    "ir_deriv": "dedipole",
+    "raman_deriv": "depolar"
+  },
+  "mol_id": "QM9S number (0-based) = col 0 of the broadened CSVs = SpectraLLM QM9s_number",
+  "sha256": {
+    "pt": "af3af09411ff91131cc2ccd39b50ccf3b964d784b960c0ff445bbce7b5ccfe08",
+    "zip": "83d016231c0860643f9216f2af26f0867f2572556aa0134c511ad03ad6849b79"
+  },
+  "versions": {
+    "rdkit": "2026.03.5",
+    "pandas": "3.0.5",
+    "numpy": "2.4.6",
+    "python": "3.11.15"
+  },
+  "checks": {
+    "pt_idx_equals_qm9s_number": 19,
+    "zip_pt_Hi_median_rel_diff": 0.0,
+    "zip_derivative_layout_vs_pt_first200": {
+      "same_as_pt": 200
+    },
+    "zip_unreadable": {},
+    "geometry_mismatches": 7100,
+    "geometry_check": "flag"
+  },
+  "counts": {
+    "pt_records": 129817,
+    "zip_files": 129817,
+    "eligible": 129733,
+    "dropped": {
+      "formula_mismatch": 1,
+      "duplicate_smiles": 83
+    },
+    "splits": {
+      "test": 1000,
+      "val": 500,
+      "train_10000": 10000,
+      "train_3000": 3000,
+      "train_1000": 1000,
+      "reserve": 200
+    },
+    "with_stereo_eligible": 0
+  },
+  "nested": {
+    "train_3000": "train_10000",
+    "train_1000": "train_3000"
+  },
+  "spectrallm_split_used": true,
+  "sllm_split_counts": {
+    "trainval": 108369,
+    "test": 12095,
+    "none": 9269
+  },
+  "balance_max_absdiff": {
+    "test": {
+      "value": 0.0068000000000000005,
+      "feature": "fg_amine"
+    },
+    "val": {
+      "value": 0.013799999999999923,
+      "feature": "hac=9"
+    },
+    "train_10000": {
+      "value": 0.0010999999999999899,
+      "feature": "fg_nitrile"
+    },
+    "train_3000": {
+      "value": 0.0015999999999999903,
+      "feature": "fg_amine"
+    },
+    "train_1000": {
+      "value": 0.007500000000000007,
+      "feature": "fg_alkene"
+    },
+    "reserve": {
+      "value": 0.0242,
+      "feature": "fg_alcohol"
+    }
+  },
+  "balance_flagged": {},
+  "fg_smarts": {
+    "alkane": "[CX4]",
+    "alkene": "[CX3]=[CX3]",
+    "alkyne": "[CX2]#C",
+    "arene": "[$([cX3](:*):*),$([cX2+](:*):*)]",
+    "alcohol": "[#6][OX2H]",
+    "ether": "[OD2]([#6])[#6]",
+    "aldehyde": "[CX3H1](=O)[#6]",
+    "ketone": "[#6][CX3](=O)[#6]",
+    "carboxylic_acid": "[CX3](=O)[OX2H1]",
+    "ester": "[#6][CX3](=O)[OX2H0][#6]",
+    "haloalkane": "[#6][F,Cl,Br,I]",
+    "alkyl_halide": "[CX3](=[OX1])[F,Cl,Br,I]",
+    "amine": "[NX3;$(NC=O)]",
+    "amide": "[NX3][CX3](=[OX1])[#6]",
+    "nitrile": "[NX1]#[CX2]",
+    "sulfide": "[#16X2H0]",
+    "thiol": "[#16X2H]"
+  },
+  "runtime_s": 299.8
+}

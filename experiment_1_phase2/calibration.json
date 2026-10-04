@@ -1,0 +1,92 @@
+{
+ "method": "spectrum_corr_v3_pt_idx",
+ "scale_override": null,
+ "chosen": {
+  "IR": {
+   "axis": "asc_500_4000",
+   "variant": "ir",
+   "scale": 0.965,
+   "fwhm": 15.0,
+   "median_r": 0.9999,
+   "p05_r": 0.9984,
+   "n_spectra": 300,
+   "peak_err_median_all": 0.39,
+   "peak_err_median_isolated": 0.3,
+   "n_isolated_peaks": 498
+  },
+  "Raman": {
+   "axis": "spectrallm",
+   "variant": "activity_then_factor",
+   "scale": 0.965,
+   "fwhm": 10.0,
+   "median_r": 0.9492,
+   "p05_r": 0.8648,
+   "n_spectra": 300,
+   "peak_err_median_all": 0.36,
+   "peak_err_median_isolated": 0.26,
+   "n_isolated_peaks": 660
+  }
+ },
+ "table": {
+  "IR": {
+   "spectrallm|ir": {
+    "axis": "spectrallm",
+    "variant": "ir",
+    "scale": 1.0,
+    "median_r": -0.0304,
+    "median_r_at_0.965": -0.0563,
+    "fwhm": 20.0
+   },
+   "asc_500_4000|ir": {
+    "axis": "asc_500_4000",
+    "variant": "ir",
+    "scale": 0.965,
+    "median_r": 0.9901,
+    "median_r_at_0.965": 0.9901,
+    "fwhm": 20.0
+   },
+   "desc_4000_500|ir": {
+    "axis": "desc_4000_500",
+    "variant": "ir",
+    "scale": 1.0,
+    "median_r": -0.0437,
+    "median_r_at_0.965": -0.0769,
+    "fwhm": 20.0
+   }
+  },
+  "Raman": {
+   "spectrallm|activity_then_factor": {
+    "axis": "spectrallm",
+    "variant": "activity_then_factor",
+    "scale": 0.965,
+    "median_r": 0.9485,
+    "median_r_at_0.965": 0.9485,
+    "fwhm": 12.0
+   },
+   "spectrallm|intensity": {
+    "axis": "spectrallm",
+    "variant": "intensity",
+    "scale": 0.965,
+    "median_r": 0.9465,
+    "median_r_at_0.965": 0.9465,
+    "fwhm": 12.0
+   },
+   "desc_4000_500|activity_then_factor": {
+    "axis": "desc_4000_500",
+    "variant": "activity_then_factor",
+    "scale": 1.0,
+    "median_r": 0.024,
+    "median_r_at_0.965": -0.028,
+    "fwhm": 12.0
+   },
+   "desc_4000_500|intensity": {
+    "axis": "desc_4000_500",
+    "variant": "intensity",
+    "scale": 1.0,
+    "median_r": 0.0241,
+    "median_r_at_0.965": -0.0275,
+    "fwhm": 12.0
+   }
+  }
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "created": "2026-10-02 13:36:40",
+  "args": {
+    "phase2": "experiment_1_phase2",
+    "arm": "B_modes_on",
+    "out": "experiment_1_phase3",
+    "train_split": "train_10000",
+    "val_split": "val",
+    "conditions": "IR,Raman,IR+Raman",
+    "bucket_arm": "A",
+    "model": "unsloth/Qwen3-8B",
+    "backend": "auto",
+    "load_in_4bit": false,
+    "max_seq_len": 4096,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_targets": "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",
+    "epochs": 3,
+    "lr": 0.0001,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "eval_batch_size": 8,
+    "warmup_frac": 0.05,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "seed": 20261001,
+    "log_steps": 25,
+    "ckpt_minutes": 30.0,
+    "resume": false,
+    "smoke": true
+  },
+  "backend": "unsloth",
+  "run_dir": "experiment_1_phase3/B_modes_on__train_10000__smoke",
+  "data": {
+    "train": {
+      "path": "experiment_1_phase2/prompts/B_modes_on/train_10000.jsonl",
+      "sha256": "b07751051df2a5d91d68bfe9884a249df04ece8372ad9b43133e2ebdc6907972",
+      "examples": 192
+    },
+    "val": {
+      "path": "experiment_1_phase2/prompts/B_modes_on/val.jsonl",
+      "sha256": "ce72618798eab68258cd1b11d42af39d5d36150f6f50366f4c794ece3fb8720a",
+      "examples": 48
+    }
+  },
+  "tokens": {
+    "mean": 1703.3166666666666,
+    "p95": 2544.2999999999997,
+    "max": 2740,
+    "train_tokens_per_epoch": 331769
+  },
+  "batch_order_fingerprint": "13d6f1dd9e1145b8",
+  "trainable_parameters": 43646976,
+  "optimiser_steps": 12,
+  "steps_per_epoch": 12,
+  "val_loss_by_epoch": [
+    {
+      "epoch": 1,
+      "step": 12,
+      "val_loss": 1.25662
+    }
+  ],
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.5.0",
+    "peft": "0.20.0"
+  },
+  "gpu": "NVIDIA L40S",
+  "runtime_h": 0.036
+}
