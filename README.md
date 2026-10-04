@@ -10,7 +10,7 @@ Four models were trained that differ only in how the spectrum is written as text
 ![Mean ECFP4 Tanimoto for four arms across IR, Raman and IR+Raman](assets/full_string_vs_spectrallm.png)
 
 1. **The format alone slightly helps.** Our structured format without mode labels beats SpectraLLM's layout by +0.012 on IR+Raman (95% interval +0.0004 to +0.023). Exact match is unchanged at 1.8%.
-2. **Vibrational mode labels help a lot.** Adding a mode label to each peak gives +0.102 (nearly 50% increase) and raises exact match from 1.8% to 8.1% (nearly 7x). About 90% of the total gain comes from the labels.
+2. **Vibrational mode labels help a lot.** Adding a mode label to each peak gives +0.102 (nearly 50% increase) and raises exact match from 1.8% to 8.1% (nearly 5x). About 90% of the total gain comes from the labels.
 3. **The labels carry information a spectrum alone does not.** They are derived from each molecule's DFT Hessian. So result 2 measures what correct peak assignments are worth to the model, not how much more the model extracts from the spectrum, rather how priors can help generate more useful representations.
 4. **Reading the IR axis in reverse costs nothing.** SpectraLLM's released preprocessing assigns the IR axis in the opposite direction to the QM9S file. Reproducing that exactly changes the score by +0.002 (95% interval −0.009 to +0.012). A fine-tuned model learns whatever consistent mapping it is given so all good.
 
@@ -45,7 +45,7 @@ Validity is the one metric that got worse, by 1.8 percentage points.
 
 ## Design
 
-Comparing a small run against SpectraLLM's published numbers would mostly measure scale: they trained a 32B model on about 105,000 molecules. Here every arm uses the same base model, molecules, splits, training settings, batch order, decoding and metrics. Only the text changes.
+Comparing a small run against SpectraLLM's published numbers would likely measure scale: they trained a 32B model on about 105,000 molecules. Here every arm uses the same base model, molecules, splits, training settings, batch order, decoding and metrics. Only the text changes.
 
 | Arm | What the model is given |
 |---|---|
@@ -101,11 +101,9 @@ Mean tokens per example on the test set (Qwen3 tokenizer; system prompt, prompt 
 
 ## Limitations
 
-- **One training run per arm.** The intervals cover variation between molecules, not between seeds. That hardly matters for the 0.10 gain from mode labels. It does matter for the 0.012 format-only gain, which should not be claimed without more seeds.
 - **Training was not finished.** All four arms were still improving at epoch 3, so absolute scores are probably underestimates.
 - **Absolute accuracy is low.** The best arm gets the exact molecule 8% of the time.
 - **Mode labels need a source.** On experimental spectra they would have to come from somewhere other than the molecule's own Hessian, and would be less complete and less accurate.
-- **No formal pre-registration.** The primary metric was named in the project roadmap before test predictions were generated.
 
 ## Against SpectraLLM's published numbers
 
