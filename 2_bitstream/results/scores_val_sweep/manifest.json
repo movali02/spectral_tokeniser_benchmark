@@ -1,0 +1,94 @@
+{
+ "created": "2026-10-10 16:05:50",
+ "args": {
+  "pred": [
+   "step10000=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step10000.jsonl",
+   "step20000=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step20000.jsonl",
+   "step30000=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step30000.jsonl",
+   "step40000=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step40000.jsonl",
+   "step50000=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step50000.jsonl",
+   "step60000=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step60000.jsonl",
+   "best=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_best.jsonl",
+   "last=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_last.jsonl",
+   "last_g1=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_last_g1.jsonl",
+   "last_g2=runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_last_g2.jsonl"
+  ],
+  "benchmark": null,
+  "string_arms": "A,A_native,B_modes_off,B_modes_on",
+  "string_split": "test",
+  "string_decoding": "default",
+  "compare": "",
+  "primary_condition": "IR+Raman",
+  "out": "runs/qm9s/scores_val_sweep",
+  "workers": 8,
+  "skip_mces": true,
+  "n_boot": 10000,
+  "seed": 20261001,
+  "sample": 0
+ },
+ "scored_here": {
+  "step10000": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step10000.jsonl"
+  },
+  "step20000": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step20000.jsonl"
+  },
+  "step30000": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step30000.jsonl"
+  },
+  "step40000": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step40000.jsonl"
+  },
+  "step50000": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step50000.jsonl"
+  },
+  "step60000": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_step60000.jsonl"
+  },
+  "best": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_best.jsonl"
+  },
+  "last": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_last.jsonl"
+  },
+  "last_g1": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_last_g1.jsonl"
+  },
+  "last_g2": {
+   "rows": 1500,
+   "source": "runs/qm9s/v2_field_binary_modes_on_k3_train_10000_ce/predictions/val__sweep_last_g2.jsonl"
+  }
+ },
+ "read_from_benchmark": {
+  "arms": [],
+  "source": null,
+  "decoding": "default"
+ },
+ "definitions": {
+  "tanimoto": "Morgan radius 2, 2048 bits, binary",
+  "cosine": "same binary fingerprint",
+  "cosine_count": "Morgan radius 2 count fingerprint",
+  "mces": "skipped",
+  "fg": "Jaccard over 17 SMARTS",
+  "fraggle": "RDKit FraggleSim.GetFraggleSimilarity(prediction, reference)",
+  "targets": "stereo-free canonical SMILES",
+  "approx_match": "tanimoto >= 0.675",
+  "accept_match": "tanimoto >= 0.4",
+  "invalid": "0 in convention 'all'; left out in 'valid_only' and for mces"
+ },
+ "versions": {
+  "rdkit": "2026.03.3",
+  "numpy": "2.2.6",
+  "pandas": "2.2.2"
+ },
+ "runtime_s": 2.7
+}

@@ -1,0 +1,157 @@
+{
+ "created": "2026-10-07 19:51:06",
+ "inputs": {
+  "peaks": "../spectrallm_benchmark/experiment_1_phase2/peak_assignments.parquet",
+  "molecules": "../spectrallm_benchmark/experiment_1/molecules.parquet",
+  "splits_dir": "../spectrallm_benchmark/experiment_1_phase2/splits"
+ },
+ "source_sha256": {
+  "peaks": "91ed11b9d2e4a6ab20ba055c0f38078f82e949a553c7701881908300aef349dc",
+  "molecules": "45155076a9634566edb1d3a404ec3fd23745245d5a6bb646250c509ea0125aa8"
+ },
+ "schema": {
+  "p_max_ir": 35,
+  "p_max_raman": 17,
+  "l_max": 23,
+  "n_fields": 1303,
+  "window_bits": 4,
+  "npk_bits": 6
+ },
+ "molecules": 11700,
+ "peaks": 253058,
+ "peaks_by_label_components": {
+  "0": 7119,
+  "1": 146000,
+  "2": 73489,
+  "3": 26450
+ },
+ "peaks_without_label": 7119,
+ "peaks_with_mixed_label": 99939,
+ "distinct_mode_components": 147,
+ "window_count_max": 11,
+ "splits": {
+  "train_10000": {
+   "molecules": 10000,
+   "ir_peaks_max": 35,
+   "raman_peaks_max": 17,
+   "ir_peaks_mean": 13.72,
+   "raman_peaks_mean": 7.92,
+   "smiles_tokens_max": 22
+  },
+  "train_3000": {
+   "molecules": 3000,
+   "ir_peaks_max": 35,
+   "raman_peaks_max": 16,
+   "ir_peaks_mean": 13.72,
+   "raman_peaks_mean": 7.95,
+   "smiles_tokens_max": 22
+  },
+  "train_1000": {
+   "molecules": 1000,
+   "ir_peaks_max": 32,
+   "raman_peaks_max": 16,
+   "ir_peaks_mean": 13.78,
+   "raman_peaks_mean": 7.97,
+   "smiles_tokens_max": 21
+  },
+  "val": {
+   "molecules": 500,
+   "ir_peaks_max": 31,
+   "raman_peaks_max": 16,
+   "ir_peaks_mean": 13.74,
+   "raman_peaks_mean": 7.93,
+   "smiles_tokens_max": 20
+  },
+  "test": {
+   "molecules": 1000,
+   "ir_peaks_max": 31,
+   "raman_peaks_max": 16,
+   "ir_peaks_mean": 13.66,
+   "raman_peaks_mean": 7.89,
+   "smiles_tokens_max": 22
+  },
+  "reserve": {
+   "molecules": 200,
+   "ir_peaks_max": 30,
+   "raman_peaks_max": 16,
+   "ir_peaks_mean": 13.12,
+   "raman_peaks_mean": 8.18,
+   "smiles_tokens_max": 20
+  }
+ },
+ "layouts": {
+  "field_k1": {
+   "layout": "field",
+   "numeric_code": "binary",
+   "n_mode_components": 1,
+   "bits_per_token": 12,
+   "sequence_len_tokens": 419,
+   "sequence_len": 5028,
+   "cond_len_tokens": 396,
+   "smiles_tokens": 23,
+   "used_bits": 3698,
+   "padding_bits": 1330
+  },
+  "field_k2": {
+   "layout": "field",
+   "numeric_code": "binary",
+   "n_mode_components": 2,
+   "bits_per_token": 12,
+   "sequence_len_tokens": 523,
+   "sequence_len": 6276,
+   "cond_len_tokens": 500,
+   "smiles_tokens": 23,
+   "used_bits": 4634,
+   "padding_bits": 1642
+  },
+  "field_k3": {
+   "layout": "field",
+   "numeric_code": "binary",
+   "n_mode_components": 3,
+   "bits_per_token": 12,
+   "sequence_len_tokens": 627,
+   "sequence_len": 7524,
+   "cond_len_tokens": 604,
+   "smiles_tokens": 23,
+   "used_bits": 5570,
+   "padding_bits": 1954
+  },
+  "peak_k1": {
+   "layout": "peak",
+   "numeric_code": "binary",
+   "n_mode_components": 1,
+   "bits_per_token": 66,
+   "sequence_len_tokens": 57,
+   "sequence_len": 3762,
+   "cond_len_tokens": 54,
+   "smiles_tokens": 3,
+   "used_bits": 3698,
+   "padding_bits": 64
+  },
+  "peak_k2": {
+   "layout": "peak",
+   "numeric_code": "binary",
+   "n_mode_components": 2,
+   "bits_per_token": 84,
+   "sequence_len_tokens": 56,
+   "sequence_len": 4704,
+   "cond_len_tokens": 54,
+   "smiles_tokens": 2,
+   "used_bits": 4634,
+   "padding_bits": 70
+  },
+  "peak_k3": {
+   "layout": "peak",
+   "numeric_code": "binary",
+   "n_mode_components": 3,
+   "bits_per_token": 102,
+   "sequence_len_tokens": 56,
+   "sequence_len": 5712,
+   "cond_len_tokens": 54,
+   "smiles_tokens": 2,
+   "used_bits": 5570,
+   "padding_bits": 142
+  }
+ },
+ "runtime_s": 5.6
+}
