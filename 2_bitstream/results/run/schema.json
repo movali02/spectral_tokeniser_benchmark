@@ -1,0 +1,103 @@
+{
+ "schema_version": 1,
+ "p_max_ir": 35,
+ "p_max_raman": 17,
+ "l_max": 23,
+ "npk_bits": 6,
+ "window_bits": 4,
+ "n_fields": 1303,
+ "code_tables": {
+  "modality": [
+   "",
+   "IR",
+   "Raman"
+  ],
+  "bin": [
+   "",
+   "vw",
+   "w",
+   "m",
+   "s",
+   "vs"
+  ],
+  "element": [
+   "",
+   "H",
+   "C",
+   "N",
+   "O",
+   "F"
+  ],
+  "site": [
+   "",
+   "ring-site",
+   "cyclic",
+   "exocyclic",
+   "inter-ring"
+  ],
+  "phase": [
+   "",
+   "in-phase",
+   "opposite-phase",
+   "mixed-phase"
+  ],
+  "motion": [
+   "",
+   "stretching",
+   "bending",
+   "in-plane bending",
+   "out-of-plane bending",
+   "linear bending",
+   "torsion",
+   "cyclic-ring deformation",
+   "cyclic-ring out-of-plane deformation",
+   "cyclic-ring torsional/out-of-plane deformation"
+  ],
+  "smiles": {
+   "C": 10,
+   "N": 11,
+   "O": 12,
+   "F": 13,
+   "c": 18,
+   "n": 19,
+   "o": 20,
+   "[nH]": 25,
+   "[N+]": 26,
+   "[O-]": 27,
+   "=": 33,
+   "#": 34,
+   "-": 35,
+   "(": 41,
+   ")": 42,
+   "1": 49,
+   "2": 50,
+   "3": 51,
+   "4": 52,
+   "5": 53
+  }
+ },
+ "ranges": {
+  "pos_min": 500,
+  "pos_max": 4000,
+  "window_width": 250,
+  "int_steps": 100,
+  "bin_thresholds": [
+   [
+    "vs",
+    0.7
+   ],
+   [
+    "s",
+    0.5
+   ],
+   [
+    "m",
+    0.2
+   ],
+   [
+    "w",
+    0.1
+   ]
+  ]
+ }
+}
