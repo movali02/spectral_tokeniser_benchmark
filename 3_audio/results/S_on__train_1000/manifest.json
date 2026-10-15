@@ -1,0 +1,123 @@
+{
+ "created": "2026-10-14 16:24:07",
+ "args": {
+  "arm": "S_on",
+  "repo_root": "../spectrallm_benchmark",
+  "model_path": "Step-Audio-2-mini",
+  "spectra_cache": "spectra_cache.npz",
+  "out": "experiment_step_audio",
+  "train_split": "train_1000",
+  "val_split": "val",
+  "conditions": "IR,Raman,IR+Raman",
+  "epochs": 3,
+  "lr": 0.0001,
+  "eff_batch": 16,
+  "micro_batch": 2,
+  "warmup_frac": 0.05,
+  "weight_decay": 0.0,
+  "max_grad_norm": 1.0,
+  "seed": 20261001,
+  "max_seq_len": 4096,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.0,
+  "bucket_arm": "A",
+  "decim": 2,
+  "hop": 2,
+  "scaling": "log",
+  "log_decades": 4.0,
+  "unfreeze_encoder_top": 0,
+  "adaptor_name": null,
+  "encoder_name": null,
+  "no_grad_ckpt": false,
+  "log_steps": 25,
+  "resume": true,
+  "smoke": false,
+  "tokenise_only": false,
+  "limit": null,
+  "skip_peak_check": false
+ },
+ "backend": "hf-peft",
+ "run_dir": "experiment_step_audio/S_on__train_1000",
+ "arm": {
+  "name": "S_on",
+  "text_arm": "B_modes_on",
+  "audio": "none",
+  "note": "string only, with mode labels (same-backbone baseline)"
+ },
+ "audio_view": null,
+ "audio_tokens_per_spectrum": 0,
+ "data": {
+  "train": {
+   "examples": 3000,
+   "dropped_too_long": 0,
+   "tokens": {
+    "examples": 3000,
+    "mean": 1096.248,
+    "p95": 1946.0,
+    "max": 2478,
+    "total": 3288744
+   },
+   "sha256_text_arm": "4b25a3529b0b2765d1bcc29a62dd4a46df0639e8f9f3c3a9e32350e8c32b8ff6",
+   "sha256_skeleton": "64e10df07c462cc4e4764d52595781417ec948cdb99f1f020eb125fc7ab1becb"
+  },
+  "val": {
+   "examples": 1500,
+   "tokens": {
+    "examples": 1500,
+    "mean": 1091.578,
+    "p95": 1914.1,
+    "max": 2440,
+    "total": 1637367
+   }
+  }
+ },
+ "batch_order_fingerprint": "bd499b04896fb2e3",
+ "steps_per_epoch": 188,
+ "optimiser_steps": 564,
+ "trainable_parameters": 55253760,
+ "modules": {
+  "adaptor": "adapter",
+  "encoder": "encoder",
+  "lora_layers": 196
+ },
+ "val_loss_by_epoch": [
+  {
+   "epoch": 1,
+   "step": 188,
+   "val_loss": 0.82953,
+   "by_condition": {
+    "IR": 0.82444,
+    "Raman": 0.86474,
+    "IR+Raman": 0.7994
+   }
+  },
+  {
+   "epoch": 2,
+   "step": 376,
+   "val_loss": 0.79532,
+   "by_condition": {
+    "IR": 0.79829,
+    "Raman": 0.83246,
+    "IR+Raman": 0.7552
+   }
+  },
+  {
+   "epoch": 3,
+   "step": 564,
+   "val_loss": 0.95203,
+   "by_condition": {
+    "IR": 0.96227,
+    "Raman": 0.98459,
+    "IR+Raman": 0.90922
+   }
+  }
+ ],
+ "versions": {
+  "torch": "2.5.1+cu124",
+  "transformers": "4.49.0",
+  "peft": "0.14.0"
+ },
+ "gpu": "NVIDIA L40S",
+ "runtime_h": 6.928
+}
