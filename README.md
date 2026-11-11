@@ -50,19 +50,32 @@ We trained again on all eligible molecules in SpectraLLM's training pool: 108,36
 
 - **The gap grows with more data.** Our full string scores 0.570 against 0.411 for SpectraLLM's format (+0.159, Holm-corrected Wilcoxon p ≈ 2 × 10⁻⁴²; +0.114 at 10K). Exact match doubles, from 16.9% to 34.0%.
 - **No loss in validity:** 99.4% against 99.5% (p = 0.76). At 10K it was 97.3% against 99.1%.
-- **Above SpectraLLM's published IR+Raman model** (0.532), which uses Qwen3-32B, a model 4 times larger, on about the same number of training molecules (their 104,948). This holds on every similarity metric in the table; validity is about the same. Fraggle is left out because the two studies compute it differently.
+- **Above SpectraLLM's published IR+Raman model** (0.532), which uses Qwen3-32B, a model 4 times larger, on about the same number of training molecules (their 104,948). This holds on every similarity metric in the table except Fraggle, which the two studies compute differently; validity is about the same.
 
-| IR+Raman, test | A, 10K | Our string, 10K | A, 108K | Our string, 108K | SpectraLLM published (32B, IR+Raman model) |
-|---|---|---|---|---|---|
-| Tanimoto ↑ | 0.235 | 0.349 | 0.411 | **0.570** | 0.532 |
-| Exact match ↑ | 1.8% | 8.1% | 16.9% | **34.0%** | not reported |
-| Cosine ↑ | 0.364 | 0.484 | 0.534 | **0.673** | 0.629 |
-| MACCS ↑ | 0.523 | 0.686 | 0.708 | **0.836** | 0.736 |
-| Functional groups ↑ | 0.811 | 0.893 | 0.911 | **0.955** | 0.883 |
-| MCES ↓ | 5.78 | 3.95 | 3.71 | **2.40** | 3.03 |
-| Validity ↑ | 99.1% | 97.3% | 99.5% | 99.4% | 99.6% |
+<table>
+<thead>
+<tr><th rowspan="2">Metric</th><th colspan="4">Our runs: IR+Raman, test, Qwen3-8B</th><th colspan="3">SpectraLLM published, Table 19 (Qwen3-32B)</th></tr>
+<tr><th>A, 10K</th><th>Our string, 10K</th><th>A, 108K</th><th>Our string, 108K</th><th>IR only</th><th>Raman only</th><th>IR+Raman</th></tr>
+</thead>
+<tbody>
+<tr><td>Tanimoto (ECFP4) ↑</td><td>0.235</td><td>0.349</td><td>0.411</td><td><b>0.570</b></td><td>0.147</td><td>0.325</td><td>0.532</td></tr>
+<tr><td>Exact match ↑</td><td>1.8%</td><td>8.1%</td><td>16.9%</td><td><b>34.0%</b></td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>Tanimoto ≥ 0.4 ↑</td><td>7.4%</td><td>25.2%</td><td>32.9%</td><td><b>55.3%</b></td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>Cosine ↑</td><td>0.364</td><td>0.484</td><td>0.534</td><td><b>0.673</b></td><td>0.246</td><td>0.449</td><td>0.629</td></tr>
+<tr><td>MACCS Tanimoto ↑</td><td>0.523</td><td>0.686</td><td>0.708</td><td><b>0.836</b></td><td>0.344</td><td>0.575</td><td>0.736</td></tr>
+<tr><td>Functional groups ↑</td><td>0.811</td><td>0.893</td><td>0.911</td><td><b>0.955</b></td><td>0.531</td><td>0.799</td><td>0.883</td></tr>
+<tr><td>Fraggle ↑ †</td><td>0.583</td><td>0.657</td><td>0.692</td><td>0.753</td><td>0.269</td><td>0.396</td><td>0.481</td></tr>
+<tr><td>MCES ↓</td><td>5.78</td><td>3.95</td><td>3.71</td><td><b>2.40</b></td><td>7.12</td><td>5.40</td><td>3.03</td></tr>
+<tr><td>Validity ↑</td><td>99.1%</td><td>97.3%</td><td>99.5%</td><td>99.4%</td><td>100.0%</td><td>98.9%</td><td>99.6%</td></tr>
+</tbody>
+</table>
 
-A = SpectraLLM's text format, trained by us on Qwen3-8B. Published values: SpectraLLM, Table 19 ("QM9s retrained"). They score valid outputs only; we score an invalid output as 0, which changes our numbers by less than 0.003 at 99.5% validity. Our test molecules are a subset of their test split. One training run per arm.
+- **A** = SpectraLLM's text format, trained by us on Qwen3-8B. **Our string** = `B_modes_on`. 10K = 10,000 training molecules, 3 epochs; 108K = 108,369 training molecules, 1 epoch. Same 1,000 test molecules in all four columns; one training run per arm.
+- **Published columns** are copied from SpectraLLM's Table 19 ("QM9s retrained"): one model per spectrum combination, trained on 104,948 molecules. Their IR+Raman column is the like-for-like comparison; the IR-only and Raman-only models are shown for reference. "–" = not reported.
+- **Scoring differs slightly.** They score valid outputs only; we score an invalid output as 0, which changes our numbers by less than 0.003 at 99.5% validity. Our test molecules are a subset of their test split.
+- **Tanimoto ≥ 0.4** is the share of test molecules whose prediction has Tanimoto of at least 0.4 to the true molecule.
+- **MCES** is the mean over each arm's valid outputs.
+- **† Fraggle: do not compare across the two studies.** Our RDKit version returns 0 for molecules too small to fragment (maximum 0.834), and their values are lower in every setting, which points to a different calculation.
 
 [Full results, design and comparison with SpectraLLM's published numbers →](1_strings/README.md)
 
